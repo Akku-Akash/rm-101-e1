@@ -8,7 +8,7 @@ const Task = ({item,handle_del,handle_sub}) => {
     <li data-testid="task" className={styles.task}>
       <input type="checkbox" data-testid="task-checkbox" onClick={()=>{
         handle_sub(item.text)
-      }} />
+      }}  defaultChecked = {item.done}/>
       <div data-testid="task-text">{item.text}</div>
       {/* Counter here */}
       <Counter value ={item.count}/>
